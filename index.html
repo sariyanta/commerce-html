@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset=" UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CS50 Auctions</title>
+</head>
+
+<body>
+    <section class="grid md:grid-cols-12 gap-4">
+        <aside
+            class="md:col-span-3 lg:col-span-2 p-6 md:p-10 md:shadow sticky ms:overflow-y-scroll border-b md:border-b-0">
+            <div class="logo md:mb-4 grid grid-cols-2 sm:grid-cols-1">
+                <a class="font-bold text-2xl">
+                    CS50 Auctions
+                </a>
+                <button id="menuBtn" class="hamburger ml-auto block md:hidden focus:outline-none" type="button"
+                    onclick="navToggle();">
+                    Toggle
+                </button>
+            </div>
+            <nav id="menu" class="md:flex flex-col hidden mt-6">
+                <a class="border-t border-b py-1 text-lg">
+                    Sariyanta
+                </a>
+                <a class="border-b py-1 text-lg">
+                    Login
+                </a>
+                <a class="border-b py-1 text-lg">
+                    Logout
+                </a>
+                <a class="border-b py-1 text-lg">
+                    Register
+                </a>
+            </nav>
+        </aside>
+        <main class="md:col-span-9 lg:col-span-10 pt-0 p-6 md:p-10">
+            <nav class="flex gap-4 mb-4">
+                <a href="/listing/"
+                    class="text-lg font-bold px-2 py-1 bg-indigo-500 rounded text-white hover:bg-indigo-600 duration-300">Listings</a>
+                <a href="/add/"
+                    class="text-lg font-bold px-2 py-1 bg-indigo-500 rounded text-white hover:bg-indigo-600 duration-300">Add</a>
+                <a href="/whislist/"
+                    class="text-lg font-bold px-2 py-1 bg-indigo-500 rounded text-white hover:bg-indigo-600 duration-300">Whislist</a>
+            </nav>
+            <hr>
+
+            <section class="grid grid-cols-12 gap-2 py-6">
+                <div class="card relative col-span-12 lg:col-span-4">
+                    <img class="w-full h-full object-cover rounded" src="images/red-sedan.jpg" />
+                    <div
+                        class="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-black opacity-200 mt-20">
+                    </div>
+                    <div
+                        class="absolute top-0 right-0 left-0 flex justify-between p-4 bg-black bg-opacity-60 text-white items-center">
+                        <span class="price font-bold text-xln leading-0">$ 65</span>
+                        <svg class="bi text-red-500" width="24" height="24" fill="currentColor">
+                            <use xlink:href="images/bootstrap-icons.svg#heart-fill" />
+                        </svg>
+                    </div>
+                    <div class="py-2">
+                        <h2 class="text-xl font-bold">This is the title of the listing </h2>
+                        <div class="subheading flex gap-4">
+                            <span class="">Posted by Sariyanta</span>
+                            <span class="">$ 65</span>
+                        </div>
+                        <a class="px-3 py-2 bg-indigo-100 inline-block mt-4 rounded shadow-sm">Read more</a>
+                    </div>
+                </div>
+
+                <div class="card relative col-span-12 lg:col-span-4">
+                    <img class="w-full h-full object-cover rounded" src="images/red-sedan.jpg" />
+                    <div
+                        class="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-black opacity-200 mt-20">
+                    </div>
+                    <div
+                        class="absolute top-0 right-0 left-0 flex justify-between p-4 bg-black bg-opacity-60 text-white items-center">
+                        <span class="price font-bold text-xln leading-0">$ 65</span>
+                        <svg class="bi text-red-500" width="24" height="24" fill="currentColor">
+                            <use xlink:href="images/bootstrap-icons.svg#heart-fill" />
+                        </svg>
+                    </div>
+                    <div class="py-2">
+                        <h2 class="text-xl font-bold">This is the title of the listing </h2>
+                        <div class="subheading flex gap-4">
+                            <span class="">Posted by Sariyanta</span>
+                            <span class="">$ 65</span>
+                        </div>
+                        <a class="px-3 py-2 bg-indigo-100 inline-block mt-4 rounded shadow-sm">Read more</a>
+                    </div>
+                </div>
+
+                <div class="card relative col-span-12 lg:col-span-4">
+                    <img class="w-full h-full object-cover rounded" src="images/red-sedan.jpg" />
+                    <div
+                        class="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-black opacity-200 mt-20">
+                    </div>
+                    <div
+                        class="absolute top-0 right-0 left-0 flex justify-between p-4 bg-black bg-opacity-60 text-white items-center">
+                        <span class="price font-bold text-xln leading-0">$ 65</span>
+                        <svg class="bi text-red-500" width="24" height="24" fill="currentColor">
+                            <use xlink:href="images/bootstrap-icons.svg#heart-fill" />
+                        </svg>
+                    </div>
+                    <div class="py-2">
+                        <h2 class="text-xl font-bold">This is the title of the listing </h2>
+                        <div class="subheading flex gap-4">
+                            <span class="">Posted by Sariyanta</span>
+                            <span class="">$ 65</span>
+                        </div>
+                        <a class="px-3 py-2 bg-indigo-100 inline-block mt-4 rounded shadow-sm">Read more</a>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </section>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/scripts.js"></script>
+    <script>
+        function navToggle() {
+            var btn = document.getElementById('menuBtn');
+            var nav = document.getElementById('menu');
+
+            btn.classList.toggle('open');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
